@@ -12,7 +12,7 @@ from utils import *
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-application = app.server
+app = app.server
 app.title='Groceries on a graph'
 list_dict = [{}]
 ## Load an initial Graph ##
@@ -325,4 +325,4 @@ def update_graph(segment):
 
 ########### Run the app
 if __name__ == '__main__':
-    application.run(debug=True, port=8080)
+    app.run(debug=True)
